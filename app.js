@@ -221,6 +221,7 @@ function signIn() {
   setAuthLoading('signin-btn', true);
   auth.signInWithEmailAndPassword(email, password)
     .then(() => {
+      sessionStorage.setItem('goldFoodsSignedIn', 'true');
       notifySignInEmail(email, 'signed in');
       showToast('Signed in to the website successfully 🎉');
       setTimeout(() => location.href = 'index.html', 800);
@@ -241,6 +242,7 @@ function signUp() {
       return cred.user.updateProfile({ displayName: name });
     })
     .then(() => {
+      sessionStorage.setItem('goldFoodsSignedIn', 'true');
       notifySignInEmail(email, 'signed up');
       showToast('Signed up and signed into the website 🌟');
       setTimeout(() => location.href = 'index.html', 800);
@@ -251,7 +253,11 @@ function signUp() {
 function signInWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
   auth.signInWithPopup(provider)
-    .then(() => { showToast('Signed in with Google 🎉'); setTimeout(() => location.href = 'index.html', 800); })
+    .then(() => {
+      sessionStorage.setItem('goldFoodsSignedIn', 'true');
+      showToast('Signed in with Google 🎉');
+      setTimeout(() => location.href = 'index.html', 800);
+    })
     .catch(err => showToast(err.message, '❌'));
 }
 
@@ -276,6 +282,7 @@ auth.onAuthStateChanged(user => {
         e.preventDefault();
         if (confirm('Are you sure you want to sign out?')) {
           auth.signOut().then(() => {
+            sessionStorage.removeItem('goldFoodsSignedIn');
             showToast('Signed out successfully 👋');
             location.href = 'index.html';
           });
