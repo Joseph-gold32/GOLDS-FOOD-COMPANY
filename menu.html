@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Foods — Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">GF</div>
+    <span class="logo-text">Gold Foods</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="menu.html" class="active">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="cart.html" class="cart-badge">Cart <span class="badge" style="display:none">0</span></a></li>
+    <li><a href="auth.html" class="nav-cta">Sign In</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <div class="container" style="position:relative;z-index:2">
+    <span class="section-label">What We Serve</span>
+    <h1 class="section-title">Our <span>Full Menu</span></h1>
+    <p class="section-subtitle" style="margin:0 auto">From light starters to indulgent desserts — something for every craving.</p>
+  </div>
+</div>
+
+<section style="background:var(--dark);padding-top:3rem">
+  <div class="container">
+    <div class="menu-filters">
+      <button class="filter-btn active" data-filter="all">All Items</button>
+      <button class="filter-btn" data-filter="starters">Starters</button>
+      <button class="filter-btn" data-filter="mains">Mains</button>
+      <button class="filter-btn" data-filter="japanese">Japanese</button>
+      <button class="filter-btn" data-filter="healthy">Healthy</button>
+      <button class="filter-btn" data-filter="desserts">Desserts</button>
+      <button class="filter-btn" data-filter="drinks">Drinks</button>
+    </div>
+
+    <div class="dishes-grid">
+
+      <!-- STARTERS -->
+      <div class="dish-card fade-up" data-cat="starters">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=400&h=250&fit=crop" alt="Bruschetta">
+          <span class="dish-badge">Starter</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Starters</div>
+          <div class="dish-name">Classic Bruschetta</div>
+          <div class="dish-desc">Grilled bread with tomatoes, garlic, basil and olive oil.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$4.99</span>
+            <button class="dish-add" onclick="addToCart('Classic Bruschetta', 4.99, 'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="starters">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=400&h=250&fit=crop" alt="Spring Rolls">
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Starters</div>
+          <div class="dish-name">Crispy Spring Rolls</div>
+          <div class="dish-desc">Vegetable & chicken filled, served with sweet chili dip.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$5.99</span>
+            <button class="dish-add" onclick="addToCart('Crispy Spring Rolls', 5.99, 'https://images.unsplash.com/photo-1541014741259-de529411b96a?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAINS -->
+      <div class="dish-card fade-up" data-cat="mains">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=250&fit=crop" alt="Margherita Pizza">
+          <span class="dish-badge">🔥 Popular</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Italian</div>
+          <div class="dish-name">Margherita Pizza</div>
+          <div class="dish-desc">Classic wood-fired with San Marzano tomatoes & fresh mozzarella.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$10.99</span>
+            <button class="dish-add" onclick="addToCart('Margherita Pizza', 10.99, 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="mains">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=250&fit=crop" alt="Gold Burger">
+          <span class="dish-badge">⭐ Top Pick</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">American</div>
+          <div class="dish-name">Gold Signature Burger</div>
+          <div class="dish-desc">Double smash patty, caramelised onions & gold sauce.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$8.99</span>
+            <button class="dish-add" onclick="addToCart('Gold Burger', 8.99, 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="mains">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400&h=250&fit=crop" alt="Pasta">
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Italian</div>
+          <div class="dish-name">Truffle Cream Pasta</div>
+          <div class="dish-desc">House-made fettuccine with black truffle cream & parmigiano.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$12.99</span>
+            <button class="dish-add" onclick="addToCart('Truffle Cream Pasta', 12.99, 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="mains">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=250&fit=crop" alt="Steak">
+          <span class="dish-badge">👑 Premium</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Grill</div>
+          <div class="dish-name">Ribeye Steak</div>
+          <div class="dish-desc">300g prime cut, grilled to perfection with herb butter.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$15.99</span>
+            <button class="dish-add" onclick="addToCart('Ribeye Steak', 15.99, 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- JAPANESE -->
+      <div class="dish-card fade-up" data-cat="japanese">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&h=250&fit=crop" alt="Sushi">
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Japanese</div>
+          <div class="dish-name">Sushi Platter (12pc)</div>
+          <div class="dish-desc">Chef's selection of nigiri and maki with pickled ginger.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$14.99</span>
+            <button class="dish-add" onclick="addToCart('Sushi Platter', 14.99, 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="japanese">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=400&h=250&fit=crop" alt="Ramen">
+          <span class="dish-badge">🍜 New</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Japanese</div>
+          <div class="dish-name">Tonkotsu Ramen</div>
+          <div class="dish-desc">Rich pork bone broth, chashu, soft egg & nori.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$11.99</span>
+            <button class="dish-add" onclick="addToCart('Tonkotsu Ramen', 11.99, 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEALTHY -->
+      <div class="dish-card fade-up" data-cat="healthy">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop" alt="Salad">
+          <span class="dish-badge">🥗 Healthy</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Healthy</div>
+          <div class="dish-name">Garden Fresh Salad</div>
+          <div class="dish-desc">Seasonal greens, avocado, seeds & lemon vinaigrette.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$7.99</span>
+            <button class="dish-add" onclick="addToCart('Garden Fresh Salad', 7.99, 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="healthy">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=250&fit=crop" alt="Grain Bowl">
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Healthy</div>
+          <div class="dish-name">Quinoa Power Bowl</div>
+          <div class="dish-desc">Quinoa, roasted veggies, hummus & tahini drizzle.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$9.99</span>
+            <button class="dish-add" onclick="addToCart('Quinoa Power Bowl', 9.99, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="dish-card fade-up" data-cat="desserts">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=250&fit=crop" alt="Sundae">
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Dessert</div>
+          <div class="dish-name">Gold Sundae</div>
+          <div class="dish-desc">Layered gelato with caramel drizzle and gold flakes.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$5.99</span>
+            <button class="dish-add" onclick="addToCart('Gold Sundae', 5.99, 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="desserts">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=250&fit=crop" alt="Cake">
+          <span class="dish-badge">🎂 Special</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Dessert</div>
+          <div class="dish-name">Chocolate Lava Cake</div>
+          <div class="dish-desc">Warm molten chocolate centre with vanilla bean ice cream.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$6.99</span>
+            <button class="dish-add" onclick="addToCart('Chocolate Lava Cake', 6.99, 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="dish-card fade-up" data-cat="drinks">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=250&fit=crop" alt="Coffee">
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Drinks</div>
+          <div class="dish-name">Specialty Coffee</div>
+          <div class="dish-desc">Single origin pour-over or creamy latte. You choose.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$3.99</span>
+            <button class="dish-add" onclick="addToCart('Specialty Coffee', 3.99, 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card fade-up" data-cat="drinks">
+        <div class="dish-img-wrap">
+          <img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?w=400&h=250&fit=crop" alt="Juice">
+          <span class="dish-badge">🍹 Fresh</span>
+          <button class="dish-fav">♡</button>
+        </div>
+        <div class="dish-body">
+          <div class="dish-category">Drinks</div>
+          <div class="dish-name">Cold-Press Juice</div>
+          <div class="dish-desc">Daily blend of seasonal fruits and vegetables. Zero sugar added.</div>
+          <div class="dish-footer">
+            <span class="dish-price">$4.49</span>
+            <button class="dish-add" onclick="addToCart('Cold-Press Juice', 4.49, 'https://images.unsplash.com/photo-1609951651556-5334e2706168?w=200&h=150&fit=crop')">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="promo-banner">
+  <div class="container">
+    <h2>Ready to Order?</h2>
+    <p>Use code <strong>GOLD20</strong> for 20% off your first order</p>
+    <a href="cart.html" class="btn">View Cart →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <p>&copy; 2024 Gold Foods. All rights reserved.</p>
+      <div class="socials">
+        <a class="social-btn" href="#">𝕏</a>
+        <a class="social-btn" href="#">f</a>
+        <a class="social-btn" href="#">📸</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
